@@ -29,7 +29,6 @@ public final class UserAgentAnalyzer extends AbstractUserAgentAnalyzer implement
     }
 
     public static final class UserAgentAnalyzerBuilder extends AbstractUserAgentAnalyzerBuilder<UserAgentAnalyzer, UserAgentAnalyzerBuilder>{
-
         private UserAgentAnalyzerBuilder(UserAgentAnalyzer newUaa) {
             super(newUaa);
         }

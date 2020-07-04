@@ -28,6 +28,7 @@ public class TestKryoSerialization extends AbstractSerializationTest {
 
     byte[] serialize(UserAgentAnalyzerTester uaa) {
         Kryo             kryo             = new Kryo();
+        kryo.setRegistrationRequired(false);
         ByteBufferOutput byteBufferOutput = new ByteBufferOutput(1_000_000, -1);
         kryo.writeClassAndObject(byteBufferOutput, uaa);
 

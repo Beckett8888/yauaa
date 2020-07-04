@@ -27,7 +27,6 @@ public final class UserAgentAnalyzerTester extends AbstractUserAgentAnalyzerTest
     }
 
     public static final class UserAgentAnalyzerTesterBuilder extends AbstractUserAgentAnalyzerTesterBuilder<UserAgentAnalyzerTester, UserAgentAnalyzerTesterBuilder> {
-
         UserAgentAnalyzerTesterBuilder(UserAgentAnalyzerTester newUaa) {
             super(newUaa);
         }

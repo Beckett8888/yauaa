@@ -59,7 +59,7 @@ public class AbstractUserAgentAnalyzer extends AbstractUserAgentAnalyzerDirect i
         }
 
         @Override
-        public AbstractUserAgentAnalyzer read(Kryo kryo, Input input, Class<AbstractUserAgentAnalyzerDirect> type) {
+        public AbstractUserAgentAnalyzer read(Kryo kryo, Input input, Class<? extends AbstractUserAgentAnalyzerDirect> type) {
             final AbstractUserAgentAnalyzer uaa = (AbstractUserAgentAnalyzer) super.read(kryo, input, type);
             uaa.cacheSize = input.read();
             uaa.initializeCache();
@@ -117,7 +117,7 @@ public class AbstractUserAgentAnalyzer extends AbstractUserAgentAnalyzerDirect i
     }
 
     @SuppressWarnings("unchecked") // For all the casts of 'this' to 'B'
-    public abstract  static class AbstractUserAgentAnalyzerBuilder<UAA extends AbstractUserAgentAnalyzer, B extends AbstractUserAgentAnalyzerBuilder<UAA, B>>
+    public abstract static class AbstractUserAgentAnalyzerBuilder<UAA extends AbstractUserAgentAnalyzer, B extends AbstractUserAgentAnalyzerBuilder<UAA, B>>
             extends AbstractUserAgentAnalyzerDirectBuilder<UAA, B> {
         private final UAA uaa;
 

@@ -36,7 +36,7 @@ public class DebugUserAgent extends MutableUserAgent { // NOSONAR: No need to ov
 
     private static final Logger LOG = LoggerFactory.getLogger(DebugUserAgent.class);
 
-    private final transient List<Pair<UserAgent, Matcher>> appliedMatcherResults = new ArrayList<>(32);
+    private final ArrayList<Pair<UserAgent, Matcher>> appliedMatcherResults = new ArrayList<>(32);
 
     DebugUserAgent(Collection<String> wantedFieldNames) {
         super(wantedFieldNames);

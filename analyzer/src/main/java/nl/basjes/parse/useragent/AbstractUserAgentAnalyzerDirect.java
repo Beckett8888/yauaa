@@ -192,7 +192,7 @@ public abstract class AbstractUserAgentAnalyzerDirect implements Analyzer, Seria
         }
 
         @Override
-        public AbstractUserAgentAnalyzerDirect read(Kryo kryo, Input input, Class<AbstractUserAgentAnalyzerDirect> type) {
+        public AbstractUserAgentAnalyzerDirect read(Kryo kryo, Input input, Class<? extends AbstractUserAgentAnalyzerDirect> type) {
             AbstractUserAgentAnalyzerDirect uaa = super.read(kryo, input, type);
             uaa.initTransientFields();
             uaa.showDeserializationStats();
@@ -1059,7 +1059,7 @@ config:
 
     private final List<FieldCalculator> fieldCalculators = new ArrayList<>();
 
-    protected void setFieldCalculators(List<FieldCalculator> newFieldCalculators) {
+    void setFieldCalculators(List<FieldCalculator> newFieldCalculators) {
         fieldCalculators.addAll(newFieldCalculators);
     }
 

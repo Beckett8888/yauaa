@@ -103,6 +103,7 @@ public class TestMatcherList {
     // To ensure the serialization works we test that here.
     byte[] serialize(MatcherList list) {
         Kryo             kryo             = new Kryo();
+        kryo.setRegistrationRequired(false);
         ByteBufferOutput byteBufferOutput = new ByteBufferOutput(1_000_000, -1);
         kryo.writeClassAndObject(byteBufferOutput, list);
 
@@ -116,6 +117,7 @@ public class TestMatcherList {
 
     MatcherList deserialize(byte[] bytes) {
         Kryo            kryo            = new Kryo();
+        kryo.setRegistrationRequired(false);
         ByteBufferInput byteBufferInput = new ByteBufferInput(bytes);
         return (MatcherList) kryo.readClassAndObject(byteBufferInput);
     }
@@ -192,6 +194,6 @@ public class TestMatcherList {
     @Test
     public void testUnsupportedToArray() {
         assertThrows(UnsupportedOperationException.class, () ->
-            new MatcherList(1).toArray(null));
+            new MatcherList(1).toArray((Object[])null));
     }
 }

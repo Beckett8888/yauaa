@@ -27,7 +27,6 @@ public final class UserAgentAnalyzerDirect extends AbstractUserAgentAnalyzerDire
     }
 
     public static final class UserAgentAnalyzerDirectBuilder extends AbstractUserAgentAnalyzerDirectBuilder<UserAgentAnalyzerDirect, UserAgentAnalyzerDirectBuilder> {
-
         private UserAgentAnalyzerDirectBuilder(UserAgentAnalyzerDirect newUaa) {
             super(newUaa);
         }

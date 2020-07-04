@@ -125,7 +125,7 @@ public class TestMatchesList {
     @Test
     public void testUnsupportedToArray() {
         assertThrows(UnsupportedOperationException.class, () ->
-            new MatchesList(1).toArray(null));
+            new MatchesList(1).toArray((Object[])null));
     }
 
 }

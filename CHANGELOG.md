@@ -14,6 +14,8 @@ v5.20-SNAPSHOT
   - Made "Microsoft Outlook", "MacOutlook", "Outlook-Express", "Outlook-iOS" consistent and "Email Client"
 - Build
   - Disable sonarcloud on JDK 8
+  - Allow using Yauaa as a Java 9+ module.
+  - Yauaa now requires JDK 11 or newer to build, the result will still run on JRE 8.
 - Updated UDF dependencies
   - Apache Drill            1.18.0
   - Apache Nifi             1.12.1
