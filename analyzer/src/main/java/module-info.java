@@ -30,7 +30,8 @@ module nl.basjes.parse.useragent.yauaa {
     requires org.yaml.snakeyaml;
     requires spring.core;
 
-    requires org.apache.httpcomponents.client5.httpclient5;
+//    requires org.apache.httpcomponents.client5.httpclient5;
+    requires httpclient5;
     requires com.esotericsoftware.kryo;
     requires nl.basjes.collections.prefixmap;
 }

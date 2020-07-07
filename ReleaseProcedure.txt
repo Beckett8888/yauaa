@@ -3,6 +3,10 @@ So we do it manually.
 
 # Ensure all has been committed
 
+# Double check we do not need any last moment security fixes
+mvn -Ddependency-check.skip=false dependency-check:check
+./che
+
 # Ensure it all works
 mvn clean verify -PpackageForRelease
 mvn clean
